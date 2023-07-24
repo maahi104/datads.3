@@ -13,19 +13,20 @@ tower_of_hanoi(n, 'A', 'C', 'B')
 
 # QUESTION 6
 
-# def postfix_to_prefix(postfix):
-#     stack = []
-#     for char in postfix:
-#         if char.isalnum():
-#             stack.append(char)
-#         else:
-#             operand1 = stack.pop()
-#             operand2 = stack.pop()
-#             expression = char + operand2 + operand1
-#             stack.append(expression)
-#     return stack.pop()
+def postfix_to_prefix(postfix):
+    stack = []
+    for char in postfix:
+        if char.isalnum():
+            stack.append(char)
+        else:
+            operand1 = stack.pop()
+            operand2 = stack.pop()
+            expression = char + operand2 + operand1
+            stack.append(expression)
+    return stack.pop()
 
-# postfix = input("Enter postfix expression: ")
-# prefix = postfix_to_prefix(postfix)
-# print("Prefix expression:", prefix)
+postfix = input("Enter postfix expression: ")
+prefix = postfix_to_prefix(postfix)
+print("Prefix expression:", prefix)
+
 
